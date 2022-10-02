@@ -1,0 +1,31 @@
+
+ALGORITHM vowels
+VAR 
+    tab :["A","a","I","i","E","e","U","u","O","o","Y","y"] of CHAR;
+    msg :STRING;
+    i:INTEGER;
+    c:CHAR;
+    nbr nbrm:INTEGER
+
+BEGIN
+    nbr:=0;
+    nbrm:=1;
+    msg:=""
+    REPEAT
+    Write("donner une lettre")
+    Read(c)
+    msg:=msg+c;
+    UNTIL (c=".") ;
+    FOR i FROM 0 TO msg_length STEP step  DO
+        IF (msg[i]in tab) THEN
+            nbr=nbr+1;
+            ELSE IF ( msg[i]=" ") THEN
+                nbrm=nbrm+1
+            END_IF
+        END_IF
+    END_FOR
+    Write("la Taille de message est",msg.length);
+    Write("le nbr de voyelle est",nbr);
+    Write("le nbr des mots est",nbrm);
+
+END
